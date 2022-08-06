@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:text="Riddle Quiz"
+                android:textColor="#00CBCC"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <!-- Question 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="1. What month of the year has 28 days?"
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/quiz1_answer_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Option 1 for Question 1 -->
+            <RadioButton
+                android:id="@+id/quiz1_radio_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="February"
+                android:textSize="15sp" />
+
+            <!-- Option 2 for Question 1 -->
+            <RadioButton
+                android:id="@+id/quiz1_radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="March"
+                android:textSize="15sp" />
+
+            <!-- Option 3 for Question 1 -->
+            <RadioButton
+                android:id="@+id/quiz1_radio_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="July"
+                android:textSize="15sp" />
+
+            <!-- Option 4 for Question 1 -->
+            <RadioButton
+                android:id="@+id/quiz1_radio_button4"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="All of them"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <!-- Question 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="2. What question can you never answer yes to? "
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <!-- Text input for Question 2 -->
+        <EditText
+            android:id="@+id/quiz2_answer_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Answer" />
+
+        <!-- Question 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="3. I am an odd number. Take away a letter and I will become even. What number am I?"
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Decrement button for Question 3 -->
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="quiz3AnswerDecrement"
+                android:text="-" />
+
+            <!-- Answer for Question 3 -->
+            <TextView
+                android:id="@+id/quiz3_answer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <!-- Increment button for Question 3 -->
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:onClick="quiz3AnswerIncrement"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <!-- Question 4 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="4. What can run but can't walk?"
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <!-- Option 1 for Question 4 -->
+        <CheckBox
+            android:id="@+id/quiz4_answer_checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:text="Water"
+            android:textSize="16sp" />
+
+        <!-- Option 2 for Question 4 -->
+        <CheckBox
+            android:id="@+id/quiz4_answer_checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:text="Person"
+            android:textSize="16sp" />
+
+        <!-- Option 3 for Question 4 -->
+        <CheckBox
+            android:id="@+id/quiz4_answer_checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:text="River"
+            android:textSize="16sp" />
+
+        <!-- Question 5 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="5. What gets bigger the more is taken away?"
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <!-- Text input for Question 5 -->
+        <EditText
+            android:id="@+id/quiz5_answer_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Answer" />
+
+        <!-- Question 6 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="6. What can you catch, but not throw?"
+            android:textColor="#004A4A"
+            android:textSize="18sp" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/quiz6_answer_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Option 1 for Question 6 -->
+            <RadioButton
+                android:id="@+id/quiz6_radio_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="A baseball"
+                android:textSize="15sp" />
+
+            <!-- Option 2 for Question 6 -->
+            <RadioButton
+                android:id="@+id/quiz6_radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Pages"
+                android:textSize="15sp" />
+
+            <!-- Option 3 for Question 6 -->
+            <RadioButton
+                android:id="@+id/quiz6_radio_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="A cold"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="submitAnswer"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</ScrollView>
